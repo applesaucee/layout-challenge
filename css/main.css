@@ -3,79 +3,95 @@
 
 /*General Page Body Formatting*/
 html {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Sans-serif;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Sans-serif !important;
 	font-size: 18px;
 	font-weight: 300;
 }
 
-@media(min-width: 992px){
+@media(min-width: 992px) {
 	body {
 		background-image: url(../img/background.jpg);
 		background-size: cover;
 		background-attachment: fixed;
+		font-size: 18px;
 	}
 }
 
-@media(max-width: 992px){
-	body{
+@media(max-width: 992px) {
+	body {
 		font-size: 16px; /*perhaps this should be a standard default, as opposed to this stuff*/
 	}
 }
 
+/*container-fluid*/
+
+.container-fluid {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+@media(min-width: 992px) {
+	.container-fluid {
+		/*margin: 20px 20px 20px 30%;*/
+
+	}
+}
+
+/* links */
 a:link {
 	color: #0000AA;
 	text-decoration: none;
 }
 
-a:visited{
+a:visited {
 	color: #0000AA;
 	text-decoration: none;
 }
 
-a:hover{
+a:hover {
 	color: #0000EE;
 }
 
-a:focus{
+a:focus {
 	color: #0000EE;
 }
 
 /*Headings*/
-h1, h2, h3{
-	font-family: 'Raleway', 'Helvetica Neue', Helvetica, Sans-serif;
+h1, h2, h3 {
+	font-family: 'Raleway', 'Helvetica Neue', Helvetica, Sans-serif !important;
 	font-weight: 300;
 }
 
-h1{
+h1 {
 	font-size: 300%;
 	margin: 0;
 }
 
-h2{
+h2 {
 	color: #505050;
 	font-size: 150%;
 }
 
-h3{
+h3 {
 	color: #505050;
 	font-size: 125%;
 }
 
 /*Main Page Content*/
-.Main{
+.Main {
 	background-image:url(../img/ricepaper_v3.png);
 	background-repeat: repeat;
 	opacity: 0.9;
 }
 
 @media(min-width: 992px) {
-	.Main{
+	.Main {
 		margin: 20px 20px 20px 30%;
 	}
 }
 
 /*Header*/
-header{
+header {
 	padding: 1em;
 	background-color: #FA5A0F;
 	border-bottom: 5px;
@@ -83,28 +99,67 @@ header{
 	color: #FFFFFF;
 }
 
-header h3{
+header h3 {
 	font-size: 120%;
 	color: #EEEEEE;
 	margin: 0;
 }
 
+@media(max-width: 992px) {
+	header h3 {
+		display: none;
+	}
+}
+
+/*nav stylings*/
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 1em;
+}
+
+nav a {
+	color: #55E;
+}
+
+nav a:hover a:focus {  /* is this the proper syntax, or should it be split up?*/
+	color: #00E;
+}
+
+@media(min-width: 992px) {
+	.header nav {
+		position: inherit;
+		top: 10px;
+		right: 10px;
+
+	}
+}
+
 /*Restaurant Info Section*/
-.GeneralInfo{
+.GeneralInfo {
 	padding: 1em; /*has padding issue for restaurant info and header*/
 }
 
 /*Menu*/
-.Menu{
+.Menu {
 	padding: 1em;
 	background-color: rgba(207, 205, 140, 0.5);
 }
 
-.Menu dt{
+.Menu h2 {
+
+}
+
+.Menu dt {
 	font-weight: 400;
 }
 
-.Menu dd{
+.Menu dd {
 	font-size: 80%;
 	font-style: italic;
 	margin-left: 1em;
@@ -112,12 +167,12 @@ header h3{
 }
 
 /*About Us*/
-.AboutUs{
+.AboutUs {
 	padding: 1em;
 }
 
 /*Footer*/
-footer{
+footer {
 	padding: 1em;
 	background-color: #FC892F;
 	border-top: 5px;
