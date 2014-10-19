@@ -19,7 +19,7 @@ html {
 
 @media(max-width: 992px) {
 	body {
-		font-size: 16px; /*perhaps this should be a standard default, as opposed to this stuff*/
+		font-size: 16px;
 	}
 }
 
@@ -33,7 +33,7 @@ html {
 @media(min-width: 992px) {
 	.container-fluid {
 		/*margin: 20px 20px 20px 30%;*/
-
+        /* I don't think the margins are properly set up? Causes things to be too squished*/
 	}
 }
 
@@ -78,14 +78,14 @@ h3 {
 }
 
 /*Main Page Content*/
-.Main {
+.main {
 	background-image:url(../img/ricepaper_v3.png);
 	background-repeat: repeat;
 	opacity: 0.9;
 }
 
 @media(min-width: 992px) {
-	.Main {
+	.main {
 		margin: 20px 20px 20px 30%;
 	}
 }
@@ -127,39 +127,39 @@ nav a {
 	color: #55E;
 }
 
-nav a:hover a:focus {  /* is this the proper syntax, or should it be split up?*/
+nav a:hover a:focus {
 	color: #00E;
 }
 
 @media(min-width: 992px) {
-	.header nav {
-		position: inherit;
+	.main nav {
+		position: absolute;
 		top: 10px;
 		right: 10px;
-
+/*not positioned properly within the header. need to reassess px math*/
 	}
 }
 
 /*Restaurant Info Section*/
-.GeneralInfo {
-	padding: 1em; /*has padding issue for restaurant info and header*/
+.generalInfo {
+	padding: 1em;
 }
 
 /*Menu*/
-.Menu {
+
+/*Has margin issue from bootstrap.min.css:5. margin right and left have been set to -15px*/
+.menu {
 	padding: 1em;
 	background-color: rgba(207, 205, 140, 0.5);
+    /*margin-right: 0px;
+    margin-left: 0px; this will fix the weird margin error, but not sure if it's a sound idea*/
 }
 
-.Menu h2 {
-
-}
-
-.Menu dt {
+.menu dt {
 	font-weight: 400;
 }
 
-.Menu dd {
+.menu dd {
 	font-size: 80%;
 	font-style: italic;
 	margin-left: 1em;
@@ -167,8 +167,10 @@ nav a:hover a:focus {  /* is this the proper syntax, or should it be split up?*/
 }
 
 /*About Us*/
-.AboutUs {
+.aboutUs {
 	padding: 1em;
+    /*has wrong font? also related to boostrap.min.css:5*/
+
 }
 
 /*Footer*/
