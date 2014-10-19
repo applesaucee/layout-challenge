@@ -2,9 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400);
 
 /*General Page Body Formatting*/
-html {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Sans-serif !important;
-	font-size: 18px;
+body {
+	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', Sans-serif !important;
+	font-size: 16px;
 	font-weight: 300;
 }
 
@@ -17,23 +17,18 @@ html {
 	}
 }
 
-@media(max-width: 992px) {
-	body {
-		font-size: 16px;
-	}
-}
-
 /*container-fluid*/
 
 .container-fluid {
 	margin-top: 0;
 	margin-bottom: 0;
+    padding: 0;
 }
 
 @media(min-width: 992px) {
 	.container-fluid {
-		/*margin: 20px 20px 20px 30%;*/
-        /* I don't think the margins are properly set up? Causes things to be too squished*/
+        padding: 0;
+		margin: 20px 20px 20px 30%;
 	}
 }
 
@@ -58,7 +53,7 @@ a:focus {
 
 /*Headings*/
 h1, h2, h3 {
-	font-family: 'Raleway', 'Helvetica Neue', Helvetica, Sans-serif !important;
+	font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', Sans-serif !important;
 	font-weight: 300;
 }
 
@@ -70,6 +65,7 @@ h1 {
 h2 {
 	color: #505050;
 	font-size: 150%;
+    margin: 0;
 }
 
 h3 {
@@ -86,6 +82,7 @@ h3 {
 
 @media(min-width: 992px) {
 	.main {
+        position:absolute;
 		margin: 20px 20px 20px 30%;
 	}
 }
@@ -136,8 +133,7 @@ nav a:hover a:focus {
 		position: absolute;
 		top: 10px;
 		right: 10px;
-/*not positioned properly within the header. need to reassess px math*/
-	}
+    }
 }
 
 /*Restaurant Info Section*/
@@ -147,12 +143,14 @@ nav a:hover a:focus {
 
 /*Menu*/
 
-/*Has margin issue from bootstrap.min.css:5. margin right and left have been set to -15px*/
+/* added .row changes in order to override boostrap styling*/
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
 .menu {
 	padding: 1em;
 	background-color: rgba(207, 205, 140, 0.5);
-    /*margin-right: 0px;
-    margin-left: 0px; this will fix the weird margin error, but not sure if it's a sound idea*/
 }
 
 .menu dt {
@@ -169,8 +167,6 @@ nav a:hover a:focus {
 /*About Us*/
 .aboutUs {
 	padding: 1em;
-    /*has wrong font? also related to boostrap.min.css:5*/
-
 }
 
 /*Footer*/
